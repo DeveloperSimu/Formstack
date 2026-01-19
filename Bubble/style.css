@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  width: 850px;
+  height: 500px;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.form-container {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+span {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #777;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form a {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay-container {
+  flex: 1;
+  background: linear-gradient(to right, #0b7bc1, #00c6ff);
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ Oval Shape */
+  border-top-left-radius: 100% 150%;
+  border-bottom-left-radius: 100% 150%;
+
+  /* ✅ 3D + Transition Effects */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.6s ease;
+  box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.ghost {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+#signup-modal {
+  display: none; /* ⬅️ এটা দিয়ে modal টি প্রথমে লুকানো থাকবে */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.signup-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-box .cancel {
+  background: #ccc;
+}
+
+.overlay-container:hover {
+  transform: rotateY(-5deg) scale(1.02);
+  box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.3);
+}

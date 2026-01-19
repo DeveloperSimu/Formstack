@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Signup UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container" id="main-container">
+        <!-- Sign In -->
+        <div class="form-container sign-in-container">
+            <form id="login-form">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/20/google-logo.png" /></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/20/facebook-new.png" /></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/20/github.png" /></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/20/linkedin.png" /></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email" id="login-email" required />
+                <input type="password" placeholder="Password" id="login-password" required />
+                <a href="#">Forget Your Password?</a>
+                <button type="submit">SIGN IN</button>
+            </form>
+        </div>
+
+        <!-- Sign Up (Overlay Part) -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <h1>Hello, Friend!</h1>
+                <p>Register with your personal details to use all of site features</p>
+                <button class="ghost" onclick="toggleSignUp()">SIGN UP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign-Up Popup -->
+    <div id="signup-modal" style="display: none;"> <!-- ✅ এটা সঠিক -->
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="email" placeholder="Email" id="signup-email" required />
+                <input type="password" placeholder="Password" id="signup-password" required />
+                <button type="submit">Create Account</button>
+                <button type="button" class="cancel" onclick="closeSignUp()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
